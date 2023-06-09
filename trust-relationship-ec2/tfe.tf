@@ -15,6 +15,7 @@ resource "tfe_workspace" "trusted_workspace" {
   name              = var.tfc_workspace_name
   organization      = var.tfc_organization_name
   working_directory = var.vcs_working_directory
+  queue_all_runs    = false
 
   vcs_repo {
     identifier     = var.vcs_identifier
